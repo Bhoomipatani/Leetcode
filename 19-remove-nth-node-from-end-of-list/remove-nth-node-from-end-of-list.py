@@ -11,7 +11,7 @@ class Solution:
             curr=curr.next
             count+=1
         num=count-n
-        print(num)
+
         if num==0:
             head=head.next
         while num>1:
@@ -19,8 +19,6 @@ class Solution:
             num -= 1
             if num == 0:
                 break
-            
-        print(temp)
         if temp.next is not None:
             temp.next=temp.next.next
       
