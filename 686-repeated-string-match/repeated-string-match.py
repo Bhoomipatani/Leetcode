@@ -4,7 +4,6 @@ class Solution:
         l = (m - 1) // n + 1
         for i in range(l, l + 3):
             ra = a * i
-            print(ra)
             if ra.find(b) >= 0:
                 return i
         return -1
