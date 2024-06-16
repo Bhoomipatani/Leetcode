@@ -1,21 +1,19 @@
 class Solution:
     def countAndSay(self, n: int) -> str:
-        say = "1"
-
-        for i in range(2, n + 1):
-            temp = ""
-            num = say[0]
-            count = 1
-            for i in range(1, len(say)):
-                curr_num = say[i]
-                if num == curr_num: # same digit
-                    count += 1
-                else:               # different digit
-                    temp += str(count) + str(num)
-                    num = curr_num
-                    count = 1
-            temp += str(count) + str(num)
-
-            # update say
-            say = temp
-        return say
+        rle='1'
+        for j in range(n-1):
+            ans=''
+            a=rle[0]
+            count=1
+            for i in range(1,len(rle)):
+                check=rle[i]
+                if check==a:
+                    count+=1
+                else:
+                    ans+=str(count)+str(a)
+                    a=check
+                    count=1
+            ans+=str(count)+str(a)
+            rle=ans
+        return rle
+        
