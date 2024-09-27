@@ -6,5 +6,7 @@ class Solution:
         while i <len(s):
             if i%(2*k)==0 :
                 s=s[0:i]+s[i:i+k][::-1]+s[i+k::]
-            i+=1
+                i+=k
+            else:
+                i+=1
         return s
