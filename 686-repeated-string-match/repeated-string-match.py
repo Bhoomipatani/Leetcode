@@ -2,9 +2,9 @@ class Solution:
     def repeatedStringMatch(self, a: str, b: str) -> int:
         n, m = len(a), len(b)
         l = m//n
-        copya=""
+        repeatstr=""
         for i in range(l+2):
-            copya+=a
-            if b in copya:
+            repeatstr+=a
+            if b in repeatstr:
                 return i+1
         return -1
