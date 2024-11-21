@@ -18,7 +18,6 @@ class Solution:
         for i in range((n//2 )+1):
             carr.append(arr[i])
             carr.append(arr[n-i-1])
-        print(arr,carr)
         i=0
         while curr:
             curr.val=carr[i]
