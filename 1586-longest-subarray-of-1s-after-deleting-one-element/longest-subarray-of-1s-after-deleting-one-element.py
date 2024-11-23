@@ -3,7 +3,8 @@ class Solution:
         left = 0
         k=1
         for right in range(len(nums)):
-            k -= 1 - nums[right]
+            if nums[right]==0:
+                k =k- 1 
             if k < 0:
                 k += 1 - nums[left]
                 left += 1
