@@ -21,9 +21,9 @@ class Solution:
                     q.append(node.left)
                 if node.right is not None:
                     q.append(node.right)
-            print(level)
+            # print(level)
             ans.append(sum(level))
-            print(ans)
+            # print(ans)
         minv=ans[0]
         minl=0
         for i in range(1,len(ans)):
