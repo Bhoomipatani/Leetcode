@@ -11,7 +11,6 @@ class Solution:
                 a1.append('0')
         i,j=0,0
         while i<len(a1) and j<len(a2):
-            print(a1[i],a2[j])
             if int(a1[i])>int(a2[j]):
                 return 1
             elif int(a1[i])<int(a2[j]):
