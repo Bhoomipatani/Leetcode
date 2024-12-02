@@ -3,7 +3,7 @@ class Solution:
         for i in range(len(matrix)):
             if matrix[i][0]==target:
                 return True
-            if matrix[i][0]<target:
+            elif matrix[i][0]<target:
                 low=0
                 high=len(matrix[0])-1
                 while low<=high:
