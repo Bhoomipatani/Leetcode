@@ -10,4 +10,4 @@ class Solution:
             return 0
         lh=self.maxDepth(root.left)
         rh=self.maxDepth(root.right)
-        return 1+max(lh,rh)
+        return max(lh,rh)+1
