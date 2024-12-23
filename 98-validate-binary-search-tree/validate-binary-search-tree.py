@@ -6,17 +6,13 @@
 #         self.right = right
 class Solution:
     def isValidBST(self, root: Optional[TreeNode]) -> bool:
-        ans=[]
-        def inorder(root):
-            nonlocal ans
+        
+        low=-inf
+        high=inf
+        def validate(root,low,high):
             if root is None:
                 return True
-            inorder(root.left)
-            ans.append(root.val)
-            inorder(root.right)
-            return ans
-        inorder(root)
-        for i in range(1,len(ans)):
-            if ans[i-1]>=ans[i]:
+            if root.val<=low or root.val>=high:
                 return False
-        return True
+            return validate(root.left,low,root.val) and validate(root.right,root.val,high)
+        return validate(root,low,high)
