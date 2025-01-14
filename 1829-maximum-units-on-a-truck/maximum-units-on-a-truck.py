@@ -5,7 +5,7 @@ class Solution:
         totalunit=0
         print(boxType)
         for i in range(len(boxType)):
-            print(trucksize)
+            # print(trucksize)
             if trucksize==0:
                 break
             elif trucksize-boxType[i][0]>0:
