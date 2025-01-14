@@ -8,11 +8,10 @@ class Solution:
             # print(trucksize)
             if trucksize==0:
                 break
-            elif trucksize-boxType[i][0]>0:
-                # print(boxType[i])
+            elif trucksize>boxType[i][0]:
                 totalunit+=boxType[i][0]*boxType[i][1]
                 trucksize-=boxType[i][0]
-            elif trucksize-boxType[i][0]<=0 :
+            elif trucksize<=boxType[i][0] :
                 totalunit+=trucksize*boxType[i][1]
                 trucksize=0
         return totalunit
