@@ -10,7 +10,6 @@ class Solution:
                 minindex=min(minindex,i)
             if nums[i]==maxnum:
                 maxindex=max(maxindex,i)
-        print(minindex,maxindex)
         if minindex>maxindex:
             swap=minindex+n-maxindex-2
         else:
