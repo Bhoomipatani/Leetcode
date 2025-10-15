@@ -1,17 +1,14 @@
 class Solution:
     def removeDuplicates(self, nums: List[int]) -> int:
-        num=nums[0]
-        k=0
-        i=0
-        while i<len(nums):
-            if num==nums[i]:
-                k+=1
-            if num==nums[i] and k>2:
-                nums.pop(i)
-            elif num!=nums[i]:
-                num=nums[i]
-                k=1
-                i+=1
+        h={}
+        for i in range(len(nums)):
+            if nums[i] not in h:
+                h[nums[i]]=1
             else:
-                i+=1
+                h[nums[i]]+=1
+        for key,value in h.items(): 
+            if value>2:
+                while value>2:
+                    nums.remove(key)
+                    value-=1
         return len(nums)
