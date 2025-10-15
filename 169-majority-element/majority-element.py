@@ -1,7 +1,12 @@
 class Solution:
     def majorityElement(self, nums: List[int]) -> int:
-        my_dict=Counter(nums)
-        max_value = max(my_dict.values())
-        for key, value in my_dict.items():
-            if value == max_value:
-                return key
+        c=0
+        k=None
+        for num in nums:
+            if c==0:
+                k=num
+            if num==k:
+                c+=1
+            else:
+                c-=1
+        return k
