@@ -4,9 +4,6 @@ class Solution:
         Do not return anything, modify nums in-place instead.
         """
         n=len(nums)
-        if k <len(nums):
-            nums[:]=nums[n-k:]+nums[0:n-k]
-        else:
-            for i in range(k):
-                nums[:]=nums[-1:]+nums[:-1]
+        k = k % n
+        nums[:]=nums[n-k:n]+nums[:n-k]
         return nums
