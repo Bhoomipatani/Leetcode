@@ -3,7 +3,6 @@ class Solution:
         maxreachable=0
         for i in range(len(nums)):
             maxreachable=max(maxreachable,nums[i]+i)
-            print(maxreachable)
             if maxreachable>=len(nums)-1:
                 return True
             if maxreachable<=i:
